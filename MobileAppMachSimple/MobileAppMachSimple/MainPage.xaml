@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppMachSimple.MainPage">
+
+    <StackLayout>
+        <Label Text="Список игр" FontSize="25" HorizontalTextAlignment="Center"/>
+        <CollectionView x:Name="collectionView" SelectionMode="Single" SelectionChanged="collectionView_SelectionChenged">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" >
+                        <Label  FontSize="25" Text="{Binding Id}"/>
+                        <Label  FontSize="25" Text="{Binding Title}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Clicked="AddGame" HorizontalOptions="Center" Text="Добавить игру"></Button>
+    </StackLayout>
+
+</ContentPage>

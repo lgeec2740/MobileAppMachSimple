@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAppMachSimple.GameInfo">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout >
+                <Label Text="Название "/>
+                <Entry x:Name="GameName"></Entry>
+                <Label Text="Описание"/>
+                <Entry x:Name="GameDiscription" ></Entry>
+                <Label Text="Выберите Издателя"></Label>
+                <Picker x:Name="comboBox" TextColor="Black" ItemDisplayBinding="{Binding Name}"></Picker>
+
+                <Button Clicked="Save_Clicked" Text="Сохранить"></Button>
+                <Button Text=" Удалить" Clicked="Del_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
